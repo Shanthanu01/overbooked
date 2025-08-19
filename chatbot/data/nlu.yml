@@ -1,0 +1,166 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremely sad
+      - so saad
+      - so sad
+      - feeling down
+      - had a bad day
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - are you automated?
+
+  - intent: ask_event_details
+    examples: |
+      - Tell me about the events
+      - What are the events happening?
+      - Can you provide details about upcoming events?
+      - What events are available?
+      - Tell me the details of the event
+      - What are the events for this month?
+      - Give me the event information
+      - I need event details
+      - Show me upcoming events
+
+  - intent: ask_event_by_artist
+    examples: |
+      - What events is {artist_name} performing in?
+      - Is {artist_name} performing at any event?
+      - Show me events by {artist_name}
+      - When is {artist_name} performing?
+      - Tell me about the events {artist_name} is performing at
+      - Does {artist_name} have any upcoming events?
+      - Where is {artist_name} performing?
+      - Show me events by [Adele](artist_name)
+      - Events featuring [Drake](artist_name)
+      - I want to see concerts by [Beyoncé](artist_name)
+      - Tell me about events with [Coldplay](artist_name)
+
+  - intent: ask_upcoming_events
+    examples: |
+      - What events are happening next month?
+      - Can you show me the events in the upcoming month?
+      - Are there any events next month?
+      - Tell me about the events for the upcoming month
+      - What is the schedule for next month?
+      - Show me the events happening in {event_date}
+      - Which events are coming up soon?
+      - Any events in {event_date}?
+
+  - intent: ask_events_by_price
+    examples: |
+      - Show me events within a specific price range
+      - What events are under $50?
+      - Are there any events between $20 and $50?
+      - Can you find events for under $100?
+      - I want to know about events that cost less than $40
+      - What events are available within my budget?
+      - Show me events that cost less than $20
+      - What events fall under $80?
+      - Show me events below $50
+      - What events cost less than $30?
+
+entities:
+  - event_name
+  - artist_name
+  - event_date
+  - price_range
+
+lookup_tables:
+  - artist_name:
+      - "Taylor Swift"
+      - "Ed Sheeran"
+      - "Ariana Grande"
+      - "BTS"
+      - "Eminem"
+      - "Travis Scott"
+      - "Kendrick Lamar"
+      - "Drake"
+      - "Adele"
+      - "Coldplay"
+
+regex:
+  artist_name: '[A-Za-z]+'

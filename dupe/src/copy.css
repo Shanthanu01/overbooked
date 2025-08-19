@@ -1,0 +1,205 @@
+.homepage {
+  font-family: Arial, sans-serif; /* Main font for the homepage */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Navbar background color */
+  color: white; /* Text color for navbar */
+}
+
+.logo {
+  font-family: 'Times New Roman'; /* Font style for the logo */
+  font-size: large; /* Logo font size */
+  background-color: red; /* Background color for the logo */
+  width: 130px; /* Width of the logo */
+  border-radius: 10px; /* Rounded corners for the logo */
+}
+
+.navbar a {
+  color: white; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  margin-left: 15px; /* Space between links */
+}
+
+.hero {
+  text-align: center; /* Center align the text */
+  padding: 50px 20px; /* Padding for the hero section */
+  background-color: #f4f4f4; /* Background color for the hero section */
+}
+
+.browse-events-btn {
+  background-color: #ff6600; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.events-list {
+  padding: 20px; /* Padding for the events list */
+}
+
+.events-filter-container {
+  display: flex;
+  justify-content: space-between; /* Align the heading and filter section with space in between */
+  align-items: center; /* Vertically center the heading and filter dropdown */
+  margin-bottom: 10px; /* Reduced spacing between filter section and event cards */
+}
+
+.askWalter-btn {
+  background-color: #ff6600; /* Button background color */
+  color: white; /* Button text color */
+  padding: 8px 16px; /* Padding for the button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+}
+
+.askWalter-btn:hover {
+  background-color: black; /* Darken on hover */
+}
+
+.filter-section {
+  display: flex;
+  align-items: center; /* Vertically center the filter section */
+  font-size: 18px; /* Increase font size for the filter section */
+}
+
+.filter-section label {
+  margin-right: 10px; /* Space between label and select */
+  font-size: 18px; /* Increase label font size */
+}
+
+.filter-section select {
+  padding: 8px; /* Increase padding for better visibility */
+  font-size: 16px; /* Increase select font size */
+}
+
+.apply-filter-btn {
+  margin-left: 10px; /* Space between select and button */
+  padding: 5px 10px; /* Padding for the button */
+  background-color: #ff6600; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 14px; /* Font size */
+}
+
+.apply-filter-btn:hover {
+  background-color: black; /* Darken on hover */
+}
+
+.events-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center items in grid */
+}
+
+.event-card {
+  background-color: #fff; /* Card background color */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners for cards */
+  padding: 15px; /* Padding inside cards */
+  text-align: center; /* Center align text in cards */
+  width: 250px; /* Fixed width for cards */
+  margin: 18px; /* Margin around cards */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.event-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.media-container {
+  width: 100%; /* Full width for media container */
+  height: 150px; /* Fixed height for media */
+  position: relative; /* Position for media overlay */
+  overflow: hidden; /* Hide overflow */
+  border-radius: 4px; /* Rounded corners for media */
+}
+
+.event-image,
+.event-video {
+  width: 100%; /* Full width for images and videos */
+  height: 100%; /* Full height for images and videos */
+  object-fit: cover; /* Cover the area without distortion */
+  border-radius: 4px; /* Rounded corners for images and videos */
+}
+
+.event-video {
+  display: block; /* Display block for videos */
+}
+
+.event-card h3 {
+  font-size: 18px; /* Font size for card titles */
+  margin: 10px 0; /* Margin for titles */
+}
+
+.event-card p {
+  font-size: 14px; /* Font size for card descriptions */
+  color: #666; /* Color for descriptions */
+}
+
+.book-btn {
+  background-color: #ff6600; /* Button background color */
+  color: white; /* Button text color */
+  padding: 8px 16px; /* Padding for the button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer on hover */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.book-btn:hover {
+  color: #ffffff; /* Text color on hover */
+  background-color: #333; /* Dark background on hover */
+}
+
+/* Pagination Button Styles */
+.pagination {
+  display: flex; /* Flex container for pagination */
+  justify-content: center; /* Center align pagination */
+  margin: 20px 0; /* Margin for pagination */
+}
+
+.pagination button {
+  background-color: #ff6600; /* Button background color */
+  color: white; /* Button text color */
+  padding: 8px 16px; /* Padding for buttons */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  margin: 0 10px; /* Space between buttons */
+}
+
+.pagination button:hover {
+  background-color: black; /* Darken background on hover */
+}
+
+.pagination span {
+  align-self: center; /* Center align page number span */
+  font-size: 16px; /* Font size for page number */
+  margin: 0 10px; /* Space around page number */
+}
+
+.disabled {
+  text-decoration: line-through;
+  background-color: blueviolet
+}
+
+
+footer {
+  text-align: center; /* Center align footer text */
+  padding: 20px; /* Padding for footer */
+  background-color: #333; /* Footer background color */
+  color: white; /* Footer text color */
+  margin-top: 20px; /* Space above footer */
+}

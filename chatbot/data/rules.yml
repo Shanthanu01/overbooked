@@ -1,0 +1,75 @@
+version: "3.1"
+rules:
+
+  # Greet the user
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # Respond to user affirming something
+  - rule: Respond to user affirming something
+    steps:
+      - intent: affirm
+      - action: utter_happy
+
+  # Respond to user denying something
+  - rule: Respond to user denying something
+    steps:
+      - intent: deny
+      - action: utter_cheer_up  # Adjusted to cheer up, since there's no 'utter_sad'
+
+  # Provide upcoming events
+  - rule: Provide upcoming events
+    steps:
+      - intent: ask_upcoming_events
+      - action: action_show_upcoming_events # Static response for upcoming events
+
+  # Respond to price range query
+  - rule: Respond to price range query
+    steps:
+      - intent: ask_events_by_price
+      - action: action_show_events_by_price  # Static response for price range
+
+  # Respond when asked about events by a specific artist
+  - rule: Respond when asked about events by a specific artist
+    steps:
+      - intent: ask_event_by_artist
+      - action: action_handle_artist_queries  # Static response for artist events
+
+  # Provide event details
+  - rule: Provide event details
+    steps:
+      - intent: ask_event_details
+      - action: action_show_event_details  # Static response for event details
+
+  # Handle goodbye intent
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Respond with a bot statement when the user asks if the bot is real
+  - rule: Respond with a bot statement when the user challenges the bot
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  # Handle user's mood if they feel great
+  - rule: Handle user's mood when they say they're feeling great
+    steps:
+      - intent: mood_great
+      - action: utter_happy
+
+  # Handle user's mood if they feel unhappy
+  - rule: Provide a cheer-up message if the user is unhappy
+    steps:
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+
+  # Default response for unrecognized input
+  - rule: Default response to unknown or unrecognized input
+    steps:
+      - intent: fallback
+      - action: utter_default  # Default response for unrecognized input

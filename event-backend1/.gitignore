@@ -1,0 +1,12 @@
+# Ignore virtual environment directory
+venv/
+
+# Ignore large files and model-related files
+*.pkl
+*.dll
+*.safetensors
+
+# Ignore other large or temporary files
+*.log
+*.bak
+

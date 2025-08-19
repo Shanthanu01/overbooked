@@ -1,0 +1,136 @@
+/* AdminPage.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #343a40;
+  text-align: center; /* Centered the main heading */
+  margin-bottom: 30px; /* Increased spacing */
+}
+
+.project-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  color: #007bff;
+  text-align: left; /* Changed alignment to left */
+  margin-bottom: 20px; /* Added spacing below */
+}
+
+.event-insights, 
+.create-event-form, 
+.event-list {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px; /* Slightly larger border radius */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect */
+}
+
+.event-insights h2, 
+.create-event-form h2, 
+.event-list h2 {
+  font-size: 24px;
+  color: #495057;
+  margin-bottom: 15px;
+  text-align: center; /* Centered section headings */
+}
+
+.bg-light {
+  background-color: #e9ecef !important;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Increased spacing */
+}
+
+label {
+  font-weight: bold;
+  display: block; /* Block display for better alignment */
+  margin-bottom: 5px; /* Spacing below label */
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da; /* Added border */
+  padding: 10px; /* Added padding for better usability */
+  width: 100%; /* Ensures full width */
+  box-sizing: border-box; /* Box sizing to include padding */
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 10px 20px; /* Added padding for buttons */
+  background-color: #007bff; /* Button background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse; /* Collapse borders for tables */
+}
+
+.table th {
+  background-color: #007bff;
+  color: white;
+  padding: 12px; /* Added padding */
+  text-align: left;
+}
+
+.table th, 
+.table td {
+  padding: 10px; /* Consistent padding for all cells */
+  text-align: left;
+  border-bottom: 1px solid #dee2e6; /* Added bottom border */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 28px; /* Smaller font size for smaller screens */
+  }
+
+  .project-title {
+    font-size: 24px; /* Smaller title font */
+  }
+
+  .event-insights h2, 
+  .create-event-form h2, 
+  .event-list h2 {
+    font-size: 20px; /* Smaller section headings */
+  }
+}

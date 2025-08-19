@@ -1,0 +1,84 @@
+version: "3.1"
+stories:
+
+  # Story: happy path - user greets and expresses happiness
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  # Story: sad path 1 - user greets, expresses unhappiness, and gets a cheer-up response
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  # Story: sad path 2 - user greets, expresses unhappiness, and receives a goodbye after a denial
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_cheer_up
+
+  # Story: asking about event details
+  - story: ask about event details
+    steps:
+      - intent: ask_event_details
+      - action: action_show_event_details  # Dynamic action for event details
+
+  # Story: asking about events by a specific artist
+  - story: ask about events by artist
+    steps:
+      - intent: ask_event_by_artist
+      - action: action_handle_artist_queries  # Dynamic action for handling artist queries
+
+  # Story: asking about upcoming events
+  - story: ask about upcoming events
+    steps:
+      - intent: ask_upcoming_events
+      - action: action_show_upcoming_events  # Dynamic action for upcoming events
+
+  # Story: asking about events within a specific price range
+  - story: ask about events by price range
+    steps:
+      - intent: ask_events_by_price
+      - action: action_show_events_by_price  # Dynamic action for events by price range
+
+  # Story: user greets and then says goodbye
+  - story: greet and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Story: bot challenge - user asks if it's a bot
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot  # Static response for bot challenge
+
+  # Story: user asks about events with a specific artist, then asks about upcoming events
+  - story: ask about artist and upcoming events
+    steps:
+      - intent: ask_event_by_artist
+      - action: action_handle_artist_queries  # Dynamic action for handling artist queries
+      - intent: ask_upcoming_events
+      - action: action_show_upcoming_events  # Dynamic action for upcoming events
+
+  # Story: fallback - user provides an unknown input, bot responds with a default message
+  - story: fallback response
+    steps:
+      - intent: fallback
+      - action: utter_default  # Fallback action when no match is found
